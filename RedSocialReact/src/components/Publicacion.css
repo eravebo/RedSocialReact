@@ -1,0 +1,477 @@
+/* ========== PUBLICACION ESTILO FACEBOOK ========== */
+
+.fb-post {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  margin-bottom: 16px;
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* --- Cabecera del post --- */
+.fb-post-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+}
+
+.fb-post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.fb-post-header-info {
+  flex: 1;
+}
+
+.fb-post-nombre {
+  font-weight: 700;
+  font-size: 15px;
+  color: #050505;
+  line-height: 1.2;
+}
+
+.fb-post-nombre:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.fb-post-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #65676B;
+  margin-top: 2px;
+}
+
+.fb-post-meta .fa {
+  font-size: 12px;
+}
+
+.fb-post-options {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+}
+
+.fb-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #65676B;
+  font-size: 18px;
+  transition: background 0.15s;
+}
+
+.fb-icon-btn:hover {
+  background: #F2F2F2;
+}
+
+/* --- Contenido del post --- */
+.fb-post-contenido {
+  padding: 0 16px 12px;
+  font-size: 15px;
+  color: #050505;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* --- Imágenes del post --- */
+.fb-post-imagenes-1 img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.fb-post-imagenes-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.fb-post-imagenes-2 img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Contador de reacciones --- */
+.fb-post-contadores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 15px;
+  color: #65676B;
+  border-top: 1px solid #E4E6EB;
+}
+
+.fb-contadores-likes {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.fb-contadores-likes:hover span {
+  text-decoration: underline;
+}
+
+.fb-emoji-reactions {
+  display: flex;
+}
+
+.fb-emoji-reactions span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E7F3FF;
+  margin-left: -4px;
+  z-index: 1;
+}
+
+.fb-emoji-reactions span:first-child {
+  margin-left: 0;
+}
+
+/* --- Botones de acción (Like / Comentar / Compartir) --- */
+.fb-post-acciones {
+  display: flex;
+  padding: 4px 12px;
+  border-top: 1px solid #E4E6EB;
+}
+
+.fb-accion-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 4px;
+  border: none;
+  background: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #65676B;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: inherit;
+}
+
+.fb-accion-btn:hover {
+  background: #F2F2F2;
+}
+
+.fb-accion-btn.liked {
+  color: #1877F2;
+}
+
+.fb-accion-btn .fa {
+  font-size: 18px;
+}
+
+/* --- Sección de comentarios --- */
+.fb-comentarios {
+  padding: 0 16px 12px;
+  background: #fff;
+}
+
+/* Input de nuevo comentario */
+.fb-comentario-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.fb-comentario-input-row img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.fb-comentario-input-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.fb-comentario-input {
+  width: 100%;
+  background: #F0F2F5;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 40px 8px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+.fb-comentario-input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 2px #1877F2;
+}
+
+.fb-comentario-send {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1877F2;
+  font-size: 16px;
+  padding: 4px;
+}
+
+.fb-comentario-send:disabled {
+  color: #BCC0C4;
+  cursor: default;
+}
+
+/* Tarjeta de comentario */
+.fb-comentario {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.fb-comentario img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.fb-comentario-burbuja {
+  background: #F0F2F5;
+  border-radius: 18px;
+  padding: 8px 12px;
+  max-width: calc(100% - 48px);
+}
+
+.fb-comentario-burbuja .autor {
+  font-weight: 700;
+  font-size: 13px;
+  color: #050505;
+}
+
+.fb-comentario-burbuja .texto {
+  font-size: 14px;
+  color: #050505;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.fb-comentario-acciones {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+  padding-left: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #65676B;
+}
+
+.fb-comentario-acciones span {
+  cursor: pointer;
+}
+
+.fb-comentario-acciones span:hover {
+  text-decoration: underline;
+}
+
+.fb-comentario-acciones span.liked-text {
+  color: #1877F2;
+}
+
+.fb-comentario-tiempo {
+  color: #65676B;
+  font-weight: 400;
+}
+
+/* Respuestas */
+.fb-respuestas {
+  margin-left: 40px;
+  margin-top: 6px;
+}
+
+.fb-ver-respuestas {
+  margin-left: 40px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: #65676B;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.fb-ver-respuestas:hover {
+  text-decoration: underline;
+}
+
+/* Input de respuesta */
+.fb-respuesta-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 40px;
+  margin-top: 6px;
+}
+
+.fb-respuesta-input-row img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.fb-respuesta-input {
+  flex: 1;
+  background: #F0F2F5;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+}
+
+.fb-respuesta-input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 2px #1877F2;
+}
+
+.fb-respuesta-send {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1877F2;
+  font-size: 14px;
+}
+
+.fb-respuesta-send:disabled {
+  color: #BCC0C4;
+}
+
+/* Modal compartir */
+.fb-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fb-modal {
+  background: #fff;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 95vw;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+.fb-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #E4E6EB;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.fb-modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #E4E6EB;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fb-modal-body {
+  padding: 16px;
+}
+
+.fb-modal-textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  resize: none;
+  min-height: 80px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.fb-modal-preview {
+  border: 1px solid #E4E6EB;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.fb-modal-preview-inner {
+  padding: 10px;
+  font-size: 13px;
+  color: #65676B;
+}
+
+.fb-modal-footer {
+  padding: 12px 16px;
+  border-top: 1px solid #E4E6EB;
+}
+
+.fb-modal-publicar {
+  width: 100%;
+  padding: 10px;
+  background: #1877F2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.fb-modal-publicar:hover {
+  background: #166FE5;
+}
